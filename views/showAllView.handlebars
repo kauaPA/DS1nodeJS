@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+<body>
+    Books stored in books table
+
+    <br>
+
+    <table class="table">
+        <thead>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+        </thead>
+
+        <tbody>
+            {{#each results_form}}
+            <tr>
+                <td>{{ id }}</td>
+                <td>{{ title }}</td>
+                <td>{{ description }}</td>
+                <td><a href="/edit/{{ id }}">Edit</a>"      
+               </td>
+               <td><a href="/delete/{{ id }}">Delete</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+
+
+
+</body>
+</html>
